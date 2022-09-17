@@ -9,8 +9,8 @@
     justify-content: center;
     text-align: center;
     margin-bottom: 50px;
+    background-attachment: fixed;
     align-items: center;
-    box-shadow: -1px 39px 49px -2px rgba(255, 255, 255, 0.2);
 }
 .header__container{
     width: 100%;
@@ -24,6 +24,10 @@
     font-size: 60px;
     font-family: cursive;
     margin-bottom: 30px;
+
+    @media(max-width: 415px){
+        font-size: 50px;
+    }
 }
 .header__list{
 
@@ -63,7 +67,7 @@
             background: rgb(194, 2, 2);
             height: 100%;
             width: 100px;
-            border-radius: 3px;
+            border-radius: 0 3px 3px 0;
             color: #fff;
             font-weight: 700;
             transition: $tranbg;
@@ -119,4 +123,38 @@
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
+}
+
+.scroll-top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: red;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $tranbg;
+    display: none;
+
+    &:hover{
+        background: #121212;
+    }
+
+    box-icon{
+        fill: #Fff;
+    }
+}
+.scroll-top--show{
+    display: block;    
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
