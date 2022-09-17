@@ -1,0 +1,122 @@
+@import "_null-style.scss";
+@import "_var.scss";
+
+//header===============================================================
+.header{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    align-items: center;
+    box-shadow: -1px 39px 49px -2px rgba(255, 255, 255, 0.2);
+}
+.header__container{
+    width: 100%;
+    max-width: 500px;
+}
+.header__inner{
+    padding: 30px 0;
+}
+.header__logo{
+    color: #fff;
+    font-size: 60px;
+    font-family: cursive;
+    margin-bottom: 30px;
+}
+.header__list{
+
+    &-link{
+        a{
+            color: #fff;
+            transition: $trancol;
+            font-family: cursive;
+            font-size: 17px;
+
+            &:hover{
+                color: red;
+            }
+        }
+    }
+    &-search{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 5px;
+            padding: 0 90px 0 15px;
+            font-size: 16px;
+        }
+
+        button{
+            position: absolute;
+            right: 0;
+            background: rgb(194, 2, 2);
+            height: 100%;
+            width: 100px;
+            border-radius: 3px;
+            color: #fff;
+            font-weight: 700;
+            transition: $tranbg;
+
+            &:hover{
+                background: rgb(159, 3, 3);
+            }
+        }
+    }
+    li:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+
+//gallery=============================================================================
+.gallery__item{
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: transform .2s linear;
+    &:hover{
+        transform: scale(1.01);
+    }
+
+    &:hover .gallery__item-text{
+        opacity: 1;
+    }
+
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+.gallery__item-text{
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    transition: opacity .2s linear;
+
+    box-icon{
+        cursor: pointer;
+        transition: $trancol;
+        fill: #fff;
+
+        &:hover{
+            fill: red
+        }
+    }
+    opacity: 0;
+}
+.gallery__container{
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+}
